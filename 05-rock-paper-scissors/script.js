@@ -1,17 +1,25 @@
-function play(userChoice) {
-    let choices = ["rock", "paper", "scissors"];
-    let computerChoice = choices[Math.floor(Math.random() * 3)];
+function play(user) {
+    const choices = ['rock', 'paper', 'scissors'];
+    const computer = choices[Math.floor(Math.random() * choices.length)];
+
+    document.getElementById("userChoice").textContent = `You chose: ${capitalize(user)}`;
+    document.getElementById("computerChoice").textContent = `Computer chose: ${capitalize(computer)}`;
     let result = "";
-    if (userChoice === computerChoice) {
-        result = "It's a tie!";
+    if (user === computer) {
+        result = "It's a draw!";
     } else if (
-        (userChoice === "rock" && computerChoice === "scissors") ||
-        (userChoice === "paper" && computerChoice === "rock") ||
-        (userChoice === "scissors" && computerChoice === "paper")
+        (user === 'rock' && computer === 'scissors') ||
+        (user === 'paper' && computer === 'rock') ||
+        (user === 'scissors' && computer === 'paper')
     ) {
-        result = "You win!";
+        result = "You win! 🎉";
     } else {
-        result = "You lose!";
+        result = "You lose 😢";
     }
-    document.getElementById("result").textContent = `Computer chose ${computerChoice}. ${result}`;
+
+    document.getElementById("result").textContent = `Result: ${result}`;
+}
+
+function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
 }
