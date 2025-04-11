@@ -1,61 +1,57 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #89f7fe, #66a6ff);
-    font-family: 'Poppins', sans-serif;
     margin: 0;
-    text-align: center;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
     width: 90%;
     max-width: 400px;
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
 input {
-    width: calc(100% - 20px);
+    width: 80%;
     padding: 10px;
+    margin-bottom: 15px;
     font-size: 16px;
-    border: 2px solid #66a6ff;
-    border-radius: 6px;
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: #ff6b6b;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 12px;
+    padding: 10px 20px;
     font-size: 16px;
-    background: #ff6b6b;
+    background-color: #4A90E2;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background: #ff4757;
+    background-color: #357ABD;
 }
 
 #weatherResult {
     margin-top: 20px;
-    font-size: 18px;
-    color: #333;
+}
+
+#weatherResult h2 {
+    margin-bottom: 5px;
+}
+
+#weatherResult p {
+    margin: 6px 0;
+    font-size: 16px;
 }
